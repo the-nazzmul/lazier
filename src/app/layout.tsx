@@ -1,21 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/providers/theme-provider";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const font = DM_Sans({
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
   title: "Lazier",
-  description: "Why should you work hard when you can be smart and lazy?",
+  description:
+    "Why should you work hard when you can be smart and lazy? Automate your work with Lazier.",
 };
 
 export default function RootLayout({
@@ -25,9 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${font.className}  antialiased`}>
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
