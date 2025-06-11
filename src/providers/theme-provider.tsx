@@ -21,7 +21,7 @@ export function ThemeProvider({
   return (
     <NextThemesProvider
       attribute="class"
-      defaultTheme="system" // ✅ System theme is applied after hydration
+      defaultTheme="dark" // ✅ System theme is applied after hydration
       enableSystem
       disableTransitionOnChange
       {...props}

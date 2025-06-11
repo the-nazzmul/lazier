@@ -1,7 +1,6 @@
-import Link from "next/link";
-import { ModeToggle } from "./mode-toggler";
 import { MenuIcon } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Navbar = async () => {
   return (
@@ -39,7 +38,7 @@ const Navbar = async () => {
               {true ? "Dashboard" : "Get Started"}
             </span>
           </Link>
-          <ModeToggle />
+          {/* <ModeToggle /> */}
           {/* TODO: User */}
           <MenuIcon className="md:hidden" />
         </aside>

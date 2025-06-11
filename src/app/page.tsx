@@ -1,12 +1,16 @@
 import { ContainerScroll } from "@/components/global/container-scroll";
+import { HeroParallax } from "@/components/global/hero-parallax";
+import { InfiniteMovingCards } from "@/components/global/infinite-moving-cards";
 import Navbar from "@/components/global/navbar";
 import { Button } from "@/components/ui/button";
+import { CLIENTS, PRODUCTS } from "@/lib/constant";
 import Image from "next/image";
 
 export default function Home() {
   return (
     <main>
       <Navbar />
+      {/* hero section */}
       <section className="h-screen w-full bg-neutral-950 rounded-md !overflow-visible relative flex flex-col items-center antialiased">
         <div className="absolute inset-0 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_35%,#223_100%)]" />
         <div className="flex flex-col mt-[100px] md:mt-[50px]">
@@ -37,6 +41,19 @@ export default function Home() {
             />
           </ContainerScroll>
         </div>
+      </section>
+      {/* brands scroll section */}
+      <section className="py-16">
+        <InfiniteMovingCards
+          className="md:mt-[18rem] mt-[-50px]"
+          items={CLIENTS}
+          direction="right"
+          speed="slow"
+        />
+      </section>
+      {/* parallax */}
+      <section>
+        <HeroParallax products={PRODUCTS} />
       </section>
     </main>
   );
