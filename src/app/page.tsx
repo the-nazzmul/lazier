@@ -1,9 +1,11 @@
 import { ContainerScroll } from "@/components/global/container-scroll";
 import { HeroParallax } from "@/components/global/hero-parallax";
 import { InfiniteMovingCards } from "@/components/global/infinite-moving-cards";
+import { Lamp } from "@/components/global/lamp";
 import Navbar from "@/components/global/navbar";
+import PlanCard from "@/components/global/plan-card";
 import { Button } from "@/components/ui/button";
-import { CLIENTS, PRODUCTS } from "@/lib/constant";
+import { CLIENTS, PRODUCTS, SUBSCRIPTION_PLANS } from "@/lib/constant";
 import Image from "next/image";
 
 export default function Home() {
@@ -54,6 +56,21 @@ export default function Home() {
       {/* parallax */}
       <section>
         <HeroParallax products={PRODUCTS} />
+      </section>
+      {/* plans section */}
+      <section className="mt-12">
+        <Lamp />
+        <div className="flex flex-wrap items-center justify-center flex-col md:flex-row gap-8 -mt-72">
+          {SUBSCRIPTION_PLANS.map((plan) => (
+            <PlanCard
+              key={plan.title}
+              title={plan.title}
+              description={plan.description}
+              price={plan.price}
+              features={plan.features}
+            />
+          ))}
+        </div>
       </section>
     </main>
   );

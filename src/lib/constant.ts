@@ -81,3 +81,24 @@ export const PRODUCTS = [
     thumbnail: "/p5.png",
   },
 ];
+
+export const SUBSCRIPTION_PLANS = [
+  {
+    title: "Hobby",
+    price: 0,
+    description: "Get a glimpse of what our software is capable of doing.",
+    features: ["3 Free automation", "100 tasks per month", "Two-step Actions"],
+  },
+  {
+    title: "Pro",
+    price: 29,
+    description: "Get a glimpse of what our software is capable of doing.",
+    features: ["3 Free automation", "100 tasks per month", "Two-step Actions"],
+  },
+  {
+    title: "Unlimited",
+    price: 99,
+    description: "Get a glimpse of what our software is capable of doing.",
+    features: ["3 Free automation", "100 tasks per month", "Two-step Actions"],
+  },
+];
