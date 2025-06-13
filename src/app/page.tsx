@@ -60,7 +60,7 @@ export default function Home() {
       {/* plans section */}
       <section className="mt-12">
         <Lamp />
-        <div className="flex flex-wrap items-center justify-center flex-col md:flex-row gap-8 -mt-72">
+        <div className="flex flex-wrap items-center justify-center flex-col md:flex-row gap-8 -mt-72 mb-24">
           {SUBSCRIPTION_PLANS.map((plan) => (
             <PlanCard
               key={plan.title}
